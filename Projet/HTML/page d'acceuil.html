@@ -7,7 +7,6 @@
     <script type="text/javascript" src="../JS/ModeSombre.js"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/projet.css">
     <link rel="stylesheet" type="text/css" href="../icon/all.css">
-
 </head>
 <body class="dark-theme">
 <header>
@@ -25,21 +24,24 @@
             </ul>
             <form class="recherche">
                 <div class="search-icon">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" size="100">
                     <img src="" alt="">
-                    ::before
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 </div>
                 <label class="switch">
-                    ::before
                     <input id="btn" type="checkbox">
                     <span class="btnForme">
-                    ::before
                 </span>
-                    ::after
                 </label>
 
             </form>
         </nav>
+    </div>
+    <button id="openModalBtn">Se connecter</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Contenu de la fenêtre modale</p>
+        </div>
     </div>
 </header>
 <main>

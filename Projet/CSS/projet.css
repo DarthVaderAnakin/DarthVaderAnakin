@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+/* def variable */
+:root {
+    --padding-vertical: 14px; /* Mémoriser la valeur de padding */
+    --padding-horizontal: 25px;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 .navbar {
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -12,13 +17,14 @@
     margin: 10px;
     text-align: center;
     animation: clignotementBordure 4s infinite;
-    padding: 32px 16px;
+    padding:calc(var(--padding-vertical) * 2) calc(var(--padding-horizontal) * 2);
 }
 .logo{
     float: left;
     width: 100px;
     overflow: hidden;
     margin: 10px;
+    padding-top: var(--padding-horizontal);
 }
 
 .nav-barlogo {
@@ -30,27 +36,51 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding-right: var(--padding-vertical);
+    padding-top: var(--padding-horizontal);
+    justify-content: space-between;
+    margin-right: 20px;
     text-decoration: none;
     font-size: 17px;
     border-radius: 15px; /  *  arrondir angle */
-    transition: background-color 4s, color 4s;
+    gap: 10px;
+    transition: background-color 4s, color 4s, transform 0.5s;
+}
+.nav-item:hover {
+    transform: scale(1.4);
+    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
 }
 .recherche {
-    float: left;
-    padding: 14px 16px;
-
+    padding:var(--padding-vertical) var(--padding-horizontal);
+    display: flex;
+    justify-content: center;
+    padding-left: 300px;
+    border: none;
 }
-.icon-red {
-    color: red;
+.switch{
+    float: right;
+    display: flex;
+    padding:var(--padding-vertical) var(--padding-horizontal);
+    justify-content: center;
+}
+.switch:hover {
+    transform: scale(2);
+    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
+}
+.search-icon {
+    color: white;
+    font-size: 20px;
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    float: right;
+}
+.search-icon:hover {
+    transform: scale(2);
+    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
 }
 .nav-item:hover {
     background-color: #ddd;
     color: black;
 }
-/* bouton rounds */
-.btnForme.round { border-radius: 34px;}
-.btnForme.round:before {border-radius: 50%;}
 
 
 @keyframes clignotementBordure {
@@ -64,6 +94,9 @@
     100% { border-color: red; }
 }
 
+
+
+
 body.dark-theme {
     background-image: linear-gradient(135deg, #17212f, #11151e),
     repeating-conic-gradient(#0002 0.000095%, #fff0 .0005%, #fff0 .005%, #fff0 .0005%),
@@ -71,4 +104,45 @@ body.dark-theme {
 
 }
 
+/* bouton rounds */
+.btnForme.round { border-radius: 34px;}
+.btnForme.round:before {border-radius: 50%;}
 
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bouton pour fermer la fenêtre modale */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
