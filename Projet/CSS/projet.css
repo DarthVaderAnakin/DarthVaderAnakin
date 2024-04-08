@@ -3,8 +3,12 @@
 :root {
     --padding-vertical: 14px; /* Mémoriser la valeur de padding */
     --padding-horizontal: 25px;
+    --text-color: #fff;
 }
-
+body {
+    overflow-y: scroll; /* Show vertical scrollbar */
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+}
 .navbar {
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -95,15 +99,6 @@
 }
 
 
-
-
-body.dark-theme {
-    background-image: linear-gradient(135deg, #17212f, #11151e),
-    repeating-conic-gradient(#0002 0.000095%, #fff0 .0005%, #fff0 .005%, #fff0 .0005%),
-    repeating-conic-gradient(#0002 0.00001%, #fff0 .00009%, #fff0 .00075%, #fff0 .000025%);
-
-}
-
 /* bouton rounds */
 .btnForme.round { border-radius: 34px;}
 .btnForme.round:before {border-radius: 50%;}
@@ -145,4 +140,66 @@ body.dark-theme {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.white {
+   color: var(--text-color)
+}
+.openModalBtn {
+    float: right;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+article > img {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+    scale: .8; opacity: 0;
+}
+@keyframes fade-in{
+    from {scale: .8; opacity: 0;}
+to {scale: 1; opacity: 1;}
+}
+.image-disparition {
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+    object-fit:cover;
+    z-index: -1;
+    transform-origin: bottom;
+    animation: image-disparition linear forwards;
+    animation-time-line: view();
+    animation-range: exit-crossing;
+}
+@keyframes image-disparition {
+    25% {opacity: 1;}
+    85%, 100% {opacity: 0; scale: 3}
+}
+/*animation espace
+*/
+section {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0) 100%),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes parallax-effect {
+    to { transform: translateY(100px) }
+}
+#parallax {
+    animation: parallax-effect linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 200px;
 }
