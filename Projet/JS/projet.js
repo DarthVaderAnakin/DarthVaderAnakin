@@ -1,3 +1,4 @@
+// fenetre modale
 window.onload = function() {
     // Récupérer le bouton et la fenêtre modale
     const modal = document.getElementById("modal");
@@ -42,16 +43,21 @@ function loadModalContent(url, modal) {
     };
     xhr.send();
 }
-import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 
-document.getElementById('parallax').animate(
-    { transform: ['translateY(0)', 'translateY(100px)']},
-    { fill: 'both',
-        timeline: new ScrollTimeline({
-            source: document.documentElement,
-        }),
-        rangeStart: new CSSUnitValue(0, 'px'),
-        rangeEnd: new CSSUnitValue(200, 'px'),
-    });
 // animation main sur scroll
+
+
+// Observer pour les éléments cachés
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 

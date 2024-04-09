@@ -3,58 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="../JS/projet.js"></script>
-    <script type="text/javascript" src="../JS/ModeSombre.js"></script>
+    <script type="text/javascript" defer src="../JS/projet.js"></script>
+    <script type="text/javascript" defer src="../JS/particles.min.js"></script>
+    <script type="text/javascript" defer src="../JS/custom.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../CSS/projet.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../icon/all.css">
 </head>
-<body>
-<header>
-    <div class="header-content">
-
-        <nav class="navbar">
-            <a class="nav-barlogo" href="#">
-                <img src="../img/Lorem-ipsum-logo-design-on-transparent-PNG.png" alt="logo" class="logo">
-                <!-- titre du site -->
-            </a>
-            <ul>
-                <li class="nav-item" id="home">Home</li>
-                <li class="nav-item" id="about">About</li>
-                <li class="nav-item" id="services">Services</li>
-                <li class="nav-item" id="contact">Contact</li>
-            </ul>
-            <form class="recherche">
-                <div class="search-icon">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <img src="" alt="">
-                </div>
-                <label class="switch">
-                    <input id="btn" type="checkbox">
-                    <span class="btnForme">
+<body id="particles-js">
+<div  class="parallax">
+    <div class="stars" n="1"></div>
+    <div class="stars" n="2"></div>
+    <div class="stars" n="3"></div>
+    <div class="stars" n="4"></div>
+    <div class="stars" n="5"></div>
+    <div class="stars" n="6"></div>
+    <div class="stars" n="7"></div>
+    <div class="stars" n="8"></div>
+    <div class="stars" n="9"></div>
+    <div class="stars" n="10"></div>
+    <header>
+        <div class="header-content">
+            <nav class="navbar">
+                <a class="nav-barlogo" href="#">
+                    <img src="../img/Lorem-ipsum-logo-design-on-transparent-PNG.png" alt="logo" class="logo">
+                    <!-- titre du site -->
+                </a>
+                <ul>
+                    <li class="nav-item" id="home">Home</li>
+                    <li class="nav-item" id="about">About</li>
+                    <li class="nav-item" id="services">Services</li>
+                    <li class="nav-item" id="contact">Contact</li>
+                    <li class="nav-item">
+                        <button id="openModalBtn">Se connecter</button>
+                    </li>
+                </ul>
+                <form class="recherche">
+                    <div class="search-icon">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <img src="" alt="">
+                    </div>
+                    <label class="switch">
+                        <input id="btn" type="checkbox">
+                        <span class="btnForme">
                 </span>
-                </label>
-
-            </form>
-            <button id="openModalBtn">Se connecter</button>
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
+                    </label>
+                </form>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<main>
-    <article>
-    <section>
-        <h1>Welcome to <span id="terme">Space</span></h1>
-        <img src="../img/download-removebg-preview.png" alt="supernova">
-        <img id="station" src="../img/station-removebg-preview.png" alt="astronaut">
-    </section>
-    </article>
-    <h2>blablabla </h2>
-<h3>    Supernovae, colossal stellar explosions, can outshine entire galaxies for a brief period. They come in different types and play a crucial role in synthesizing heavy elements like gold and silver. Their shockwaves trigger the formation of new stars and influence galaxy evolution. Supernova remnants persist for thousands of years, serving as cosmic laboratories. They've also historically shaped our understanding of the universe.</h3>
-</main>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hidden">
+            <h1>Welcome to <span id="terme">Space</span></h1>
+            <img id="station" src="../img/station-removebg-preview.png" alt="station">
+        </section>
+        <section class="hidden">
+            <h3> Supernovae, colossal stellar explosions, can outshine entire galaxies for a brief period. They come
+                in different types and play a crucial role in synthesizing heavy elements like gold and silver.
+                Their shockwaves trigger the formation of new stars and influence galaxy evolution. Supernova
+                remnants persist for thousands of years, serving as cosmic laboratories. They've also historically
+                shaped our understanding of the universe.</h3>
+            <p>paragraphe</p>
+        </section>
+        <section class="hidden">
+            <h2>blablabla </h2>
+            <h3> Supernovae, colossal stellar explosions, can outshine entire galaxies for a brief period. They come in
+                different types and play a crucial role in synthesizing heavy elements like gold and silver. Their
+                shockwaves trigger the formation of new stars and influence galaxy evolution. Supernova remnants persist
+                for thousands of years, serving as cosmic laboratories. They've also historically shaped our
+                understanding of the universe.</h3>
+        </section>
+        <section class="hidden">
+            <h1>About the universe </h1>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section>
+    </main>
+</div>
 </body>
 </html>
 
