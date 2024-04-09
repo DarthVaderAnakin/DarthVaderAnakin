@@ -7,94 +7,12 @@
     --n: 1; /*variables pour les étoiles*/
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: background-color 2s;
-    background-color: black;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 15px; /*  arrondir angle */
-    border-color: black; /* Couleur initiale, sera changée par JS */
-    margin: 10px;
-    text-align: center;
-    animation: clignotementBordure 4s infinite;
-    padding:calc(var(--padding-vertical) * 2) calc(var(--padding-horizontal) * 2);
-}
-.logo{
-    float: left;
-    width: 100px;
-    overflow: hidden;
-    margin: 10px;
-    padding-top: var(--padding-horizontal);
-}
-.nav-item {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding-right: var(--padding-vertical);
-    padding-top: var(--padding-horizontal);
-    justify-content: space-between;
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 15px; /  *  arrondir angle */
-    gap: 10px;
-    transition: background-color 4s, color 4s, transform 0.5s;
-}
-.nav-item:hover {
-    transform: scale(1.4);
-    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
-}
-.recherche {
-    padding:var(--padding-vertical) var(--padding-horizontal);
-    display: flex;
-    justify-content: center;
-    padding-left: 300px;
-    border: none;
-}
 #openModalBtn {
     background-color: transparent;
     border: none;
     color: white;
 }
-.switch{
-    float: right;
-    display: flex;
-    padding:var(--padding-vertical) var(--padding-horizontal);
-    justify-content: center;
-}
-.switch:hover {
-    transform: scale(2);
-    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
-}
-.search-icon {
-    color: white;
-    font-size: 20px;
-    padding: var(--padding-vertical) var(--padding-horizontal);
-    float: right;
-}
-.search-icon:hover {
-    transform: scale(2);
-    padding: calc(var(--padding-vertical) * 1.5) calc(var(--padding-horizontal) * 1.5);
-}
-.nav-item:hover {
-    background-color: #ddd;
-    color: black;
-}
 
-
-@keyframes clignotementBordure {
-    0% { border-color: red; }
-    14% { border-color: orange; }
-    28% { border-color: yellow; }
-    42% { border-color: green; }
-    57% { border-color: blue; }
-    71% { border-color: indigo; }
-    85% { border-color: violet; }
-    100% { border-color: red; }
-}
 /* Styles pour la fenêtre modale */
 .modal {
     display: none; /* Cachée par défaut */
