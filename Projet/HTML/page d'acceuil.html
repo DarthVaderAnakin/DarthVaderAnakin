@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device, initial-scale=1.0">
     <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" />
     <script type="text/javascript" defer src="../JS/projet.js"></script>
-    <script type="text/javascript" defer src="../JS/particles.min.js"></script>
-    <script type="text/javascript" defer src="../JS/custom.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../CSS/header.css">
     <link rel="stylesheet" type="text/css" href="../CSS/projet.css">
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../icon/all.css">
 </head>
 <body id="particles-js">
-<div  class="parallax">
-    <div class="stars" n="1"></div>
-    <div class="stars" n="2"></div>
-    <div class="stars" n="3"></div>
-    <div class="stars" n="4"></div>
-    <div class="stars" n="5"></div>
-    <div class="stars" n="6"></div>
-    <div class="stars" n="7"></div>
-    <div class="stars" n="8"></div>
-    <div class="stars" n="9"></div>
-    <div class="stars" n="10"></div>
+<div class="parallax">
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars" n=500></div><!-- on peut directement attribuer une variable pour les étoiles avec n=x -->
     <header>
         <div class="header-content">
             <nav class="navbar">
-                <a class="nav-barlogo" href="#">
-                    <img src="../img/Lorem-ipsum-logo-design-on-transparent-PNG.png" alt="logo" class="logo">
-                    <!-- titre du site -->
-                </a>
+
                 <ul>
+
+                    <li>
+                        <img src="../img/Lorem-ipsum-logo-design-on-transparent-PNG.png"
+                             alt="logo" class="logo">
+                    </li>
                     <li class="nav-item" id="home">Home</li>
                     <li class="nav-item" id="about">About</li>
                     <li class="nav-item" id="services">Services</li>
                     <li class="nav-item" id="contact">Contact</li>
+                    <li class="nav-item" id="navigation">Navigation</li>
                     <li class="nav-item">
                         <button id="openModalBtn">Se connecter</button>
                     </li>
+                    <li class="nav-item"><input type="search" class="nav-item" id="recherche" name="recherche"
+                                                placeholder="Recherche...">
+                        <label for="recherche"></label></li>
                 </ul>
-                <form class="recherche">
-                    <div class="search-icon">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <img src="" alt="">
-                    </div>
-                    <label class="switch">
-                        <input id="btn" type="checkbox">
-                        <span class="btnForme">
-                </span>
-                    </label>
+                <form>
+
                 </form>
                 <div id="modal" class="modal">
                     <div class="modal-content">
@@ -60,23 +58,34 @@
     </header>
     <main>
         <section class="hidden">
-            <h1>Welcome to <span id="terme">Space</span></h1>
-            <img id="station" src="../img/station-removebg-preview.png" alt="station">
+            <h1><span id="titre">Welcome to Space</span></h1>
+            <img id="station" src="../img/station-removebg-preview.png"
+                 alt="station">
         </section>
+        <br>
+        <br>
         <section class="hidden">
-            <h3> Supernovae, colossal stellar explosions, can outshine entire galaxies for a brief period. They come
-                in different types and play a crucial role in synthesizing heavy elements like gold and silver.
-                Their shockwaves trigger the formation of new stars and influence galaxy evolution. Supernova
-                remnants persist for thousands of years, serving as cosmic laboratories. They've also historically
+            <h3> Supernovae, colossal stellar explosions, can outshine entire
+                galaxies for a brief period. They come
+                in different types and play a crucial role in synthesizing heavy
+                elements like gold and silver.
+                Their shockwaves trigger the formation of new stars and
+                influence galaxy evolution. Supernova
+                remnants persist for thousands of years, serving as cosmic
+                laboratories. They've also historically
                 shaped our understanding of the universe.</h3>
             <p>paragraphe</p>
         </section>
         <section class="hidden">
             <h2>blablabla </h2>
-            <h3> Supernovae, colossal stellar explosions, can outshine entire galaxies for a brief period. They come in
-                different types and play a crucial role in synthesizing heavy elements like gold and silver. Their
-                shockwaves trigger the formation of new stars and influence galaxy evolution. Supernova remnants persist
-                for thousands of years, serving as cosmic laboratories. They've also historically shaped our
+            <h3> Supernovae, colossal stellar explosions, can outshine entire
+                galaxies for a brief period. They come in
+                different types and play a crucial role in synthesizing heavy
+                elements like gold and silver. Their
+                shockwaves trigger the formation of new stars and influence
+                galaxy evolution. Supernova remnants persist
+                for thousands of years, serving as cosmic laboratories. They've
+                also historically shaped our
                 understanding of the universe.</h3>
         </section>
         <section class="hidden">
@@ -85,6 +94,8 @@
         </section>
     </main>
 </div>
+<script type="text/javascript" src="../JS/particles.min.js"></script>
+<script type="text/javascript" src="../JS/custom.js"></script>
 </body>
 </html>
 

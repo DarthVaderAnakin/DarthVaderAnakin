@@ -186,7 +186,7 @@ to {scale: 1; opacity: 1;}
     }
     50% {
         opacity: 1;
-        transform: translateY(-20px) scale(2);
+        transform: translateY(-20px) scale(1.2);
     }
     100% {
         opacity: 0;
