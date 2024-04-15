@@ -32,19 +32,17 @@ function loadModalContent(url, modal) {
             // Insérer le contenu du fichier HTML dans la fenêtre modale
             modal.innerHTML = xhr.responseText;
 
-            // Si le fichier chargé est 'login.html', charger le fichier CSS spécifique
+            // Si le fichier chargé , charge le fichier CSS spécifique
             if (url.endsWith('login.html')) {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
                 link.href = '../interfaceConnection/login.css';
-                modal.appendChild(link); // Ajouter le lien CSS à la fenêtre modale
+                modal.appendChild(link); // Ajouter le lien CSS
             }
         }
     };
     xhr.send();
 }
-
-// animation main sur scroll
 
 
 // Observer pour les éléments cachés

@@ -1,8 +1,4 @@
 footer {
-    text-align: center;
-}
-footer a i {
-    font-size: 19px;
-    width: 10px;
-    height: 20px;
+    position: sticky;
+    bottom: 0;
 }
