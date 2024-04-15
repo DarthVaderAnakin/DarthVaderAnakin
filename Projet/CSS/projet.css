@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+/* def variable */
+:root {
+    --padding-vertical: 14px; /* Mémoriser la valeur de padding */
+    --padding-horizontal: 25px;
+    --text-color: #fff;
+    --n: 1; /*variables pour les étoiles*/
+}
+
+#openModalBtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.white {
+   color: var(--text-color)
+}
+
+/*article > img {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+    scale: .8; opacity: 0;
+}
+@keyframes fade-in{
+    from {scale: .8; opacity: 0;}
+to {scale: 1; opacity: 1;}
+}
+.image-disparition {
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+    object-fit:cover;
+    z-index: -1;
+    transform-origin: bottom;
+    animation: image-disparition linear forwards;
+    animation-time-line: view();
+    animation-range: exit-crossing;
+}
+@keyframes image-disparition {
+    25% {opacity: 1;}
+    85%, 100% {opacity: 0; scale: 3}
+}
+@keyframes parallax-effect {
+    to { transform: translateY(100px) }
+}
+#parallax {
+    animation: parallax-effect linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 200px;
+}
+ */
+
+.stars:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    width: 1px;
+    height: 1px;
+    --n: 1;
+    animation-duration: 6s;
+}
+
+.stars:nth-child(2) {
+    top: 20%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    --n: 2;
+    animation-duration: 7s;
+}
+
+.stars:nth-child(3) {
+    top: 30%;
+    left: 70%;
+    width: 1px;
+    height: 1px;
+    animation-duration: 6s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(4) {
+    top: 40%;
+    left: 30%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 7s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(5) {
+    top: 50%;
+    left: 60%;
+    width: 1px;
+    height: 1px;
+    animation-duration: 8s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(6) {
+    top: 60%;
+    left: 10%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 9s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(7) {
+    top: 70%;
+    left: 40%;
+    width: 1px;
+    height: 1px;
+    animation-duration: 7s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(8) {
+    top: 80%;
+    left: 80%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 11s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars:nth-child(9) {
+    top: 90%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    animation-duration: 12s;
+    animation-delay: calc(0.5s * var(--n));
+}
+
+.stars {
+    position: absolute;
+    width: calc(2px + var(--n));
+    height: calc(2px + var(--n));
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 5s infinite alternate;
+    animation-delay: calc(0.5s * var(--n));
+    transform: translate3d(0, 0, 0);
+}
+
+.stars[n] {
+    --n: attr(n);
+}
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+    }
+}
+

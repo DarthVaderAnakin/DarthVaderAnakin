@@ -1,0 +1,73 @@
+/* Ce fichier contient le code CSS de la partie <Main> du html ainsi que la structure générale du body */
+* {
+    margin:0;
+    padding:0;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+
+}
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--text-color);
+    text-align: center;
+}
+/* Styles pour les classes dans le body */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    margin: 200px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+.section {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        color: white;
+        font-size: 80px;
+}
+.show {
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.parallax {
+    width: 100%;
+    height: 100%;
+    perspective: 1px;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left:0;
+}
+img {
+    margin: 100px;
+    padding-right:calc(var(--padding-horizontal) * 2);
+}
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+#titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10rem;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #FFA500, #0000FF, #800080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
