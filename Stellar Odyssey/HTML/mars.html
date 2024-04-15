@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"/>
+    <script type="text/javascript" defer src="../JS/projet.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/projet.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/mars.css">
+</head>
+<body>
+<div class="parallax">   <!-- Animation d'étoiles qui apparaissent et disparaissent -->
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars" n=11></div><!-- on peut directement attribuer une variable pour les étoiles avec n=x -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-item" id="home"><a class="active" href="page%20d'acceuil.html"><i
+                        class="fas fa-home"></i>Home</a></li>
+                <!-- la class active sert à déterminer sur quel page est l'utilisateur dans la barre de navigation-->
+                <li class="nav-item" id="about"><a href="about.html">About</a></li>
+                <li class="nav-item" id="contact"><a href="mailto:myemail@gmail.com">Contact us</a></li>
+                <li class="nav-item">
+                    <button id="openModalBtn"><a>Login</a></button>
+                </li>
+                <li class="nav-item"><input type="search" id="recherche" name="recherche"
+                                            placeholder="SEARCH...">
+                    <label for="recherche"></label></li>
+                <li class="nav-item" id="navigation"><i class="fas fa-caret-down"></i> <a>Navigation</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mercury.html">Mercury</a></li>
+                        <li><a href="venus.html">Venus</a></li>
+                        <li class="active"><a href="mars.html">Mars</a></li>
+                        <li><a href="jupiter.html">Jupiter</a></li>
+                        <li><a href="saturn.html">Saturn</a></li>
+                        <li><a href="uranus.html">Uranus</a></li>
+                        <li><a href="neptune.html">Neptune</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="toggleParticles">Toggle Particles</button>
+            <video class="logo" autoplay loop muted playsinline>
+                <source src="../img/iconanimé.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+    <h1>Mars</h1>
+    <section class="hidden"><img alt=mars src="../img/mars.jpg"></section>
+
+    <section class="hidden" id="présentation">
+        <h2>Présentation</h2>
+        <h3><strong>Taille et Position :</strong></h3>
+        <h4>Mars a un diamètre d'environ la moitié de celui de la Terre, soit environ 6 792 kilomètres.</h4>
+        <h4>Elle est située à une distance moyenne d'environ 225 millions de kilomètres du Soleil.</h4>
+
+        <h3><strong>Atmosphère :</strong></h3>
+        <h4>L'atmosphère martienne est très mince, principalement composée de dioxyde de carbone avec des traces de gaz comme l'argon et le diazote.</h4>
+        <h4>Son atmosphère est environ 100 fois plus fine que celle de la Terre.</h4>
+
+        <h3><strong>Exploration :</strong></h3>
+        <h4>Depuis les premières missions d'exploration robotique dans les années 1960, de nombreuses sondes spatiales, robots et rovers ont été envoyés sur Mars pour étudier sa surface, son atmosphère et sa géologie.</h4>
+        <h4>Des projets de missions habitées vers Mars sont en cours de développement par diverses agences spatiales, visant à établir des colonies humaines sur la planète rouge dans un avenir proche.</h4>
+    </section>
+
+    <section class="hidden" id="caracteristiques">
+        <h2>Caractéristiques</h2>
+        <h3><strong>Topographie :</strong></h3>
+        <h4>La surface de Mars est caractérisée par des cratères, des volcans, des canyons et des plaines.</h4>
+        <h4>Le plus grand volcan du système solaire, Olympus Mons, se trouve sur Mars.</h4>
+
+        <h3><strong>Eau :</strong></h3>
+        <h4>Des preuves suggèrent qu'il y a des milliards d'années, Mars avait de l'eau liquide à sa surface, indiquant la possibilité de conditions propices à la vie.</h4>
+        <h4>Les missions d'exploration ont découvert des preuves de glace d'eau sous forme de calottes polaires et de dépôts souterrains.</h4>
+    </section>
+
+    <section class="hidden" id="funfact">
+        <h2>Fun Fact</h2>
+        <h3><strong>Projet de Colonisation par Elon Musk :</strong></h3>
+        <h4>Elon Musk, le fondateur de SpaceX, a exprimé son intention de coloniser Mars afin de rendre l'humanité multiplanétaire.</h4>
+        <h4>Une partie de son plan consiste à rendre l'environnement martien habitable en terraformant la planète.</h4>
+        <h4>Une proposition avancée par Musk implique l'utilisation de bombes nucléaires pour chauffer les calottes polaires de Mars, libérant ainsi le dioxyde de carbone piégé et augmentant la pression atmosphérique.</h4>
+        <h4>Ce processus de terraformation vise à créer des conditions plus semblables à celles de la Terre, permettant éventuellement à l'eau liquide de couler à la surface et rendant la planète plus accueillante pour la vie humaine.</h4>
+    </section>
+    <footer class="hidden">
+            <p><a href="https://www.facebook.com/" target="_blank" class="footer__social-link icon">
+                <i class="ri-facebook-circle-fill"></i>
+            </a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link icon">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="footer__social-link icon">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/" target="_blank" class="footer__social-link icon">
+                    <i class="ri-linkedin-box-fill icon"></i>
+                </a>
+            </p>
+            <p><a href="legal.html">Legal |</a> <a href="privacy.html">Privacy |</a> <a href="terms.html">Terms</a></p>
+            <p>Copyright © 2024 - All rights reserved</p>
+        </footer>
+</div>
+<script type="text/javascript" src="../JS/particles.min.js"></script>
+<script type="text/javascript" src="../JS/custom.js"></script>
+</body>
+</html>
