@@ -59,3 +59,12 @@ const observer = new IntersectionObserver(entries => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+document.getElementById('toggleParticles').addEventListener('click', function() {
+    const particles = document.getElementById('particles-js');
+    if (particles.style.display === 'none') {
+        particles.style.display = 'block';
+    } else {
+        particles.style.display = 'none';
+    }
+});
