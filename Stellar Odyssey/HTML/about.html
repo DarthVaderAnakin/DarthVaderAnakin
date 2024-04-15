@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"/>
+    <script type="text/javascript" defer src="../JS/projet.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/projet.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+</head>
+<body>
+<div class="parallax">
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars" n=11></div><!-- on peut directement attribuer une variable pour les étoiles avec n=x -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-item" id="home"><a href="page%20d'acceuil.html"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-item active" id="about"><a href="about.html">About</a></li>
+                <li class="nav-item" id="contact"><a href="mailto:myemail@gmail.com">Contact us</a></li>
+                <li class="nav-item">
+                    <button id="openModalBtn"><a>Login</a></button>
+                </li>
+                <li class="nav-item"><input type="search" id="recherche" name="recherche"
+                                            placeholder="SEARCH...">
+                    <label for="recherche"></label></li>
+                <li class="nav-item" id="navigation"><i class="fas fa-caret-down"></i> <a>Navigation</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mercure.html">Mercure</a></li>
+                        <li><a href="vénus.html">Vénus</a></li>
+                        <li><a href="mars.html">Mars</a></li>
+                        <li><a href="jupiter.html">Jupiter</a></li>
+                        <li><a href="saturne.html">Saturne</a></li>
+                        <li><a href="uranus.html">Uranus</a></li>
+                        <li><a href="neptune.html">Neptune</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="toggleParticles">Toggle Particles</button>
+            <video class="logo" autoplay loop muted playsinline>
+                <source src="../img/iconanimé.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+    <section class="hidden">
+        <br>
+        <br>
+        <h1><span id="titre">Welcome to Stellar Odyssey</span></h1>
+        <br>
+    <p>Welcome to Stellar Odyssey, your go-to destination for fascinating and educational content about space exploration
+        and beyond! </p>
+    <p>At SStellar Odyssey, we believe that learning about space should be fun and accessible to everyone.</p>
+    <p>Our blog is dedicated to providing you with interesting facts, captivating stories, and awe-inspiring images that
+        will spark your curiosity and expand your knowledge of the cosmos.</p>
+    <p>Whether you're a space enthusiast, a student, or simply curious about the universe, you'll find something
+        exciting to explore here. Best of all, our content is completely free!</p>
+    </section>
+</div>
+<script type="text/javascript" src="../JS/particles.min.js"></script>
+<script type="text/javascript" src="../JS/custom.js"></script>
+<footer>
+    <p><a href="https://www.facebook.com/" target="_blank" class="footer__social-link icon">
+        <i class="ri-facebook-circle-fill"></i>
+    </a>
+        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link icon">
+            <i class="ri-instagram-fill"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="footer__social-link icon">
+            <i class="ri-twitter-x-line"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" class="footer__social-link icon">
+            <i class="ri-linkedin-box-fill icon"></i>
+        </a>
+    </p>
+    <p><a href="legal.html">Legal |</a> <a href="privacy.html">Privacy |</a> <a href="terms.html">Terms</a></p>
+    <p>Copyright © 2024 - All rights reserved</p>
+</footer>
+</body>
+</html>
